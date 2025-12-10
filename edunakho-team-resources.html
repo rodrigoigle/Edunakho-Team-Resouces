@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edunakho Team Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .resources {
+            display: grid;
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .resource-card:hover::before {
+            opacity: 1;
+        }
+
+        .resource-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .resource-card p {
+            font-size: 1em;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .icon {
+            font-size: 1.8em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 25px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .resource-card {
+                padding: 25px;
+            }
+
+            .resource-card h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Edunakho Team Resources</h1>
+            <p>Quick access to our resources and tools</p>
+        </div>
+
+        <div class="resources">
+            <!-- Add your links here -->
+            <a href="https://rodrigoigle.github.io/Rankings-Search-Tool-/" class="resource-card" target="_blank">
+                <h2><span class="icon">📊</span> School Rankings Check for MBA</h2>
+                <p>Search and check business school rankings across multiple sources</p>
+            </a>
+
+            <!-- Example of more cards - copy and paste to add more -->
+            <!--
+            <a href="YOUR_LINK_HERE" class="resource-card" target="_blank">
+                <h2><span class="icon">📊</span> Another Resource</h2>
+                <p>Another interesting description of the resource</p>
+            </a>
+            -->
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Edunakho Team - All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>
